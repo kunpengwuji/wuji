@@ -1,40 +1,40 @@
 ---
-title: �ڲ�����������Ѷ����Tencent Analytics
+title: 在博客中启用腾讯分析Tencent Analytics
 date: 2017-09-29T07:30:28.000Z
 categories:
   - Tech
 tags:
-  - ��Ѷ
-  - ����
-  - �̳�
+  - 腾讯
+  - 博客
+  - 教程
 published: false
 ---
 
-��ǰһƪ���������Ǵ�����һ������GitHub�йܷ���Ĳ��ͣ���������ʹ����Ѷ����վ��������Tencent Analytics�����ò��͵�ͳ�Ʒ�����
+在前一篇文章中我们创建了一个基于GitHub托管服务的博客，现在我们使用腾讯的网站分析工具Tencent Analytics并启用博客的统计分析。
 
 
-## ע��Tencent Analytics
-TA��ַ��http://ta.qq.com/ 
-- ֱ��ʹ��QQ��ע�ἴ��
-- ע����ʹ��QQ�ŵ�¼
+## 注册Tencent Analytics
+TA网址：http://ta.qq.com/ 
+- 直接使用QQ号注册即可
+- 注册后可使用QQ号登录
 
-## ��ȡTA����
-- ����һ������վ��
-- ����վ���б��������Ӧվ��ġ���ȡ���롱
-- �õ����´���
+## 获取TA代码
+- 添加一个或多个站点
+- 进入站点列表，点击对应站点的“获取代码”
+- 得到如下代码
 ```
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=XXXXXXXX" charset="UTF-8"></script>
 ```
-- ���С�SId=�������һ�����ּ�Ϊ���TA ID
+- 其中“SId=”后面的一串数字即为你的TA ID
 
-## ����TA
-- �޸Ĳ��͸�Ŀ¼�µ�config.yml�ļ���..\_config.yml�����ҵ�Tencent analytics ID������������ȡ�õ�����
+## 启用TA
+- 修改博客根目录下的config.yml文件（..\_config.yml），找到Tencent analytics ID，并添加上面取得的数字
 ``` 
 # Tencent analytics ID
 tencent_analytics: XXXXXXXX
 ```
   
-- �鿴tencent-analytics.html�ļ���..\_includes\_third-party\analytics\tencent-analytics.html���������޸ģ�ֻ��ȷ�ϸ��ļ��а�����������TA���뼴�ɡ�
+- 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可。
 ```
 {% if site.tencent_analytics %}
   <script type="text/javascript">
@@ -48,8 +48,8 @@ tencent_analytics: XXXXXXXX
 {% endif %}
 ```
 
-## ����
-- �����ĺõ����ݷ�����GitHub��ʵ����TA�ڲ����е����ã�������ʱ��¼TA�鿴ͳ�Ʒ�������ˡ�
-- TA��վ���б��е�����״̬���ܻ���ʾ���޷���ȡ����δ��⵽���롱�������������ͨ��JS���ð�װ���룬��ʾ��δ��⵽���롱�Լ���վ��������ǽ����������ʾ���޷���ȡ���������������󣬲�Ӱ������ͳ�ơ�
+## 发布
+- 将更改好的内容发布到GitHub就实现了TA在博客中的启用，可以随时登录TA查看统计分析结果了。
+- TA的站点列表中的运行状态可能还显示“无法获取”或“未检测到代码”，这可能是由于通过JS调用安装代码，提示“未检测到代码”以及网站开启防火墙类软件，提示“无法获取”均属于正常现象，不影响数据统计。
 
-����޷�������Ѷ�����Ļ��������Գ���ʹ����������������������վ���������ٶȷ����ȣ������������������ƣ�ֻ���ȡ��Ӧ����ID������config.yml�ļ����ɡ�
+如果无法启用腾讯分析的话，还可以尝试使用其它第三方分析服务，如站长分析、百度分析等，方法与上述过程类似，只需获取相应服务ID并调整config.yml文件即可。
