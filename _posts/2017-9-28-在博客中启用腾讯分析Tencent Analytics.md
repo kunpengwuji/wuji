@@ -36,18 +36,18 @@ TA网址：http://ta.qq.com/
 tencent_analytics: XXXXXXXX
 ```
   
-- 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可
+- 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了TA代码即可
 ```html
-{\% if site.tencent_analytics %\}
+\{\% if site.tencent_analytics \%\}
   <script type="text/javascript">
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId= {\{ site.tencent_analytics }\}";
+      hm.src = "//tajs.qq.com/stats?sId= \{\{ site.tencent_analytics \}\}";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
-{\% endif %\}
+\{\% endif \%\}
 ```
 
 ## 发布
