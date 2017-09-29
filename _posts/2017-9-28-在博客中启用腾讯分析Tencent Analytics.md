@@ -37,18 +37,17 @@ tencent_analytics: XXXXXXXX
 ```
   
 - 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可
-
 ```html
-&#123&#37 if site.tencent_analytics &#37&#125
+\{\% if site.tencent_analytics \%\}
   <script type="text/javascript">
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId={{ site.tencent_analytics }}";
+      hm.src = "//tajs.qq.com/stats?sId=\{\{ site.tencent_analytics \}\}";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
-&#123&#37 endif &#37&#125
+\{\% endif \%\}
 ```
 
 ## 发布
