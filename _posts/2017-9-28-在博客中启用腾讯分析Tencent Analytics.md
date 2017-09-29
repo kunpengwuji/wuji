@@ -7,7 +7,7 @@ tags:
   - 腾讯
   - 博客
   - 教程
-published: false
+published: true
 ---
 
 在前一篇文章中我们创建了一个基于GitHub托管服务的博客，现在我们使用腾讯的网站分析工具Tencent Analytics并启用博客的统计分析。
