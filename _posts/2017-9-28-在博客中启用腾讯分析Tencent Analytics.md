@@ -23,8 +23,7 @@ TA网址：http://ta.qq.com/
 - 添加一个或多个站点
 - 进入站点列表，点击对应站点的“获取代码”
 - 得到如下代码
-
-```Javascript
+```javascript
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=XXXXXXXX" charset="UTF-8"></script>
 ```
 - 其中“SId=”后面的一串数字即为你的TA ID
@@ -32,15 +31,13 @@ TA网址：http://ta.qq.com/
 
 ## 启用TA
 - 修改博客根目录下的config.yml文件（..\_config.yml），找到Tencent analytics ID，并添加上面取得的数字
-
-```Yaml 
+```yaml 
 # Tencent analytics ID
 tencent_analytics: XXXXXXXX
 ```
   
 - 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可。
-
-```HTML
+```html
 {% if site.tencent_analytics %}
   <script type="text/javascript">
     (function() {
