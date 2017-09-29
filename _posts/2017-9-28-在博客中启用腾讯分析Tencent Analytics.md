@@ -37,7 +37,8 @@ tencent_analytics: XXXXXXXX
 ```
   
 - 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可。
-```
+
+```HTML
 {% if site.tencent_analytics %}
   <script type="text/javascript">
     (function() {
