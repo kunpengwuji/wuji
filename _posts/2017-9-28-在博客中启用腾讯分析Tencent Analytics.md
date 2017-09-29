@@ -39,7 +39,7 @@ tencent_analytics: XXXXXXXX
 - 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可
 
 ```html
-{% if site.tencent_analytics %}
+&#123&#37 if site.tencent_analytics &#37&#125
   <script type="text/javascript">
     (function() {
       var hm = document.createElement("script");
@@ -48,7 +48,7 @@ tencent_analytics: XXXXXXXX
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
-{% endif %}
+&#123&#37 endif &#37&#125
 ```
 
 ## 发布
