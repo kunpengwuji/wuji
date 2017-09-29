@@ -37,6 +37,7 @@ tencent_analytics: XXXXXXXX
 ```
   
 - 查看tencent-analytics.html文件（..\_includes\_third-party\analytics\tencent-analytics.html），不用修改，只需确认该文件中包含了完整的TA代码即可
+
 ```html
 {% if site.tencent_analytics %}
   <script type="text/javascript">
@@ -51,7 +52,7 @@ tencent_analytics: XXXXXXXX
 ```
 
 ## 发布
-- 将更改好的内容发布到GitHub就实现了TA在博客中的启用，可以随时登录TA查看统计分析结果了。
-- TA的站点列表中的运行状态可能还显示“无法获取”或“未检测到代码”，这可能是由于通过JS调用安装代码，提示“未检测到代码”以及网站开启防火墙类软件，提示“无法获取”均属于正常现象，不影响数据统计。
+- 将更改好的内容发布到GitHub就实现了TA在博客中的启用，可以随时登录TA查看统计分析结果了
+- TA的站点列表中的运行状态可能还显示“无法获取”或“未检测到代码”，这可能是由于通过JS调用安装代码，提示“未检测到代码”以及网站开启防火墙类软件，提示“无法获取”均属于正常现象，不影响数据统计
 
 如果无法启用腾讯分析的话，还可以尝试使用其它第三方分析服务，如站长分析、百度分析等，方法与上述过程类似，只需获取相应服务ID并调整config.yml文件即可。
