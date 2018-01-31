@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: 2018-01-31T10:44:21.000Z
 categories:
   - Tech
