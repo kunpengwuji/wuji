@@ -1,6 +1,6 @@
 ---
 published: true
-date: {}
+date: 2018-02-01T10:05:02.000Z
 categories:
   - Tech
 tags:
