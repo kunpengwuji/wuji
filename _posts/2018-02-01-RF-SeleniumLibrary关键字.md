@@ -1,5 +1,12 @@
 ---
 published: true
+date: 2018-02-01T09:59:51.000Z
+categories:
+  - Tech
+tags:
+  - 测试
+  - RobotFramework
+  - Selenium
 ---
 ## 关键字
 
