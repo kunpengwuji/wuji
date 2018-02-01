@@ -135,11 +135,94 @@ RF SeleniumLibrary的关键字就是封装好的函数，围绕着Selenium在Web
 1. page_should_contain_button(self, locator, message=None, loglevel='INFO')
 1. page_should_not_contain_button(self, locator, message=None, loglevel='INFO')
 
+## frames.py
+类-FrameKeywords
+方法-
+1. select_frame(self, locator)
+1. unselect_frame(self)
+1. current_frame_should_contain(self, text, loglevel='INFO')
+1. current_frame_contains(self, text, loglevel='INFO')
+1. current_frame_should_not_contain(self, text, loglevel='INFO')
+1. frame_should_contain(self, locator, text, loglevel='INFO')
 
+## javascript.py
+类-JavaScriptKeywords
+方法-
+1. execute_javascript(self, *code)
+1. executeasyncjavascript(self, *code)
 
+## runonfailure.py
+类-RunOnFailureKeywords
+方法-
+1. register_keyword_to_run_on_failure(self, keyword)
+1. resolve_keyword(name)
 
+## screenshot.py
+类-ScreenshotKeywords
+方法-
+1. set_screenshot_directory(self, path, persist='DEPRECATED')
+1. capture_page_screenshot(self, filename='selenium-screenshot-{index}.png')
 
+## selectelement.py
+类-SelectElementKeywords
+方法-
+1. get_list_items(self, locator, values=False)
+1. get_selected_list_label(self, locator)
+1. get_selected_list_labels(self, locator)
+1. get_selected_list_value(self, locator)
+1. get_selected_list_values(self, locator)
+1. list_selection_should_be(self, locator, *expected)
+1. list_should_have_no_selections(self, locator)
+1. page_should_contain_list(self, locator, message=None, loglevel='INFO')
+1. page_should_not_contain_list(self, locator, message=None, loglevel='INFO')
+1. select_all_from_list(self, locator)
+1. select_from_list(self, locator, *options)
+1. select_from_list_by_index(self, locator, *indexes)
+1. select_from_list_by_value(self, locator, *values)
+1. select_from_list_by_label(self, locator, *labels)
+1. unselect_all_from_list(self, locator)
+1. unselect_from_list(self, locator, *items)
+1. unselect_from_list_by_index(self, locator, *indexes)
+1. unselect_from_list_by_value(self, locator, *values)
+1. unselect_from_list_by_label(self, locator, *labels)
 
+## tableelement.py
+类-TableElementKeywords
+方法-
+1. get_table_cell(self, locator, row, column, loglevel='INFO')
+1. table_cell_should_contain(self, locator, row, column, expected, loglevel='INFO')
+1. table_column_should_contain(self, locator, column, expected, loglevel='INFO')
+1. table_footer_should_contain(self, locator, expected, loglevel='INFO')
+1. able_header_should_contain(self, locator, expected, loglevel='INFO')
+1. table_row_should_contain(self, locator, row, expected, loglevel='INFO')
+1. table_should_contain(self, locator, expected, loglevel='INFO')
 
+## waiting.py
+类-WaitingKeywords
+方法-
+1. wait_for_condition(self, condition, timeout=None, error=None)
+1. wait_until_page_contains(self, text, timeout=None, error=None)
+1. wait_until_page_does_not_contain(self, text, timeout=None, error=None)
+1. wait_until_page_contains_element(self, locator, timeout=None, error=None)
+1. wait_until_page_does_not_contain_element(self, locator, timeout=None, error=None)
+1. wait_until_element_is_visible(self, locator, timeout=None, error=None)
+1. wait_until_element_is_not_visible(self, locator, timeout=None, error=None)
+1. wait_until_element_is_enabled(self, locator, timeout=None, error=None)
+1. wait_until_element_contains(self, locator, text, timeout=None, error=None)
+1. wait_until_element_does_not_contain(self, locator, text, timeout=None, error=None)
 
-
+## window.py
+类-WindowKeywords
+方法-
+1. select_window(self, locator='MAIN')
+1. close_window(self)
+1. get_window_handles(self)
+1. get_window_identifiers(self)
+1. get_window_names(self)
+1. get_window_titles(self)
+1. get_locations(self)
+1. maximize_browser_window(self)
+1. get_window_size(self)
+1. set_window_size(self, width, height)
+1. get_window_position(self)
+1. set_window_position(self, x, y)
